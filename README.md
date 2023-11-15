@@ -2,6 +2,7 @@
 # Persian Poetry With GPT
 
 based on [nanoGPT](https://github.com/karpathy/nanoGPT.git) by andrej karpathy for training on Persian Poetry.
+
 کدنویسی، آموزش و خروجی گرفتن از یک مدل ترنسفورمر (مدل زبانی)  با آموزش بر روی اشعار فارسی. این مدل به صورت کاراکتر لول (حروف به عنوان توکن های ورودی) آموزش میبیند.
 کامنت ها به فارسی نیز قرار گرفته است.
 
