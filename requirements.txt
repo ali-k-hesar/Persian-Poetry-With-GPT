@@ -1,0 +1,9 @@
+torch
+numpy
+tqdm
+
+# GPT2 تنها در صورت نیاز به مدل آموزش دیده اولیه
+# در غیر این صورت تمام کتابخانه های زیر را کامنت کنید
+transformers
+datasets
+tiktoken
