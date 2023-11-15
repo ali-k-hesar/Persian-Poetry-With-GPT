@@ -3,6 +3,7 @@ Sample from a trained model
 سمپل گرفتن از مدل
 """
 import os
+import sys
 import pickle
 from contextlib import nullcontext
 import torch
@@ -14,7 +15,9 @@ from model import GPTConfig, GPT
 # resume: $out_dir/ckpt.pt خروجی گرفتن از مدل آموزش داده شده داخل 
 # gpt2-xl or gpt2-*: GPT2 برای خروجی گرفتن از مدل آموزش دیده ی 
 init_from = 'resume' 
-out_dir = 'out' 
+out_dir = 'out'
+model_dir = sys.argv[1] if len(sys.argv)-1 else None
+print(model_dir)
 # or "<|endoftext|>" or etc. Can also specify a file, use as: "FILE:prompt.txt"
 # شروع جمله برای ادامه داده شدن توسط مدل
 start = "\n" 
@@ -52,7 +55,7 @@ ctx = nullcontext() if device_type == 'cpu' else torch.amp.autocast(device_type=
 if init_from == 'resume':
     # init from a model saved in a specific directory
     # out_dir شروع مدل از وزن های آموزش دیده داخل مسیر
-    ckpt_path = os.path.join(out_dir, 'd.pt')
+    ckpt_path = model_dir or os.path.join(out_dir, 'ckpt.pt')
     checkpoint = torch.load(ckpt_path, map_location=device)
     gptconf = GPTConfig(**checkpoint['model_args'])
     model = GPT(gptconf)

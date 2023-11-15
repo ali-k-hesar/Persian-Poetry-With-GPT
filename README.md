@@ -42,6 +42,7 @@ based on [nanoGPT](https://github.com/karpathy/nanoGPT.git) by andrej karpathy f
 ```
 
 مراحل انتهایی آموزش
+
 اوورفیت شده و بسیار نزدیک به اشعار سهراب
 (به روز میشود)
 ```
@@ -95,6 +96,6 @@ $ python train.py
 بهتر است در یک تکست ادیتور نتایج را کپی کنید.
 
 ```
-$ python sample.py --out_dir=out-shakespeare-char
+$ python sample.py out/ckpt.pt
 ```
 
