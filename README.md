@@ -63,7 +63,6 @@ based on [nanoGPT](https://github.com/karpathy/nanoGPT.git) by andrej karpathy f
 ```
 
 ## نصب کتابخانه های مورد نیاز
-## install
 
 ```
 pip install -r requirements.txt
